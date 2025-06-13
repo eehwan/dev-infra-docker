@@ -43,12 +43,12 @@ cp .env.template .env
 
 ### 3. Nginx 설정 파일 생성
 
-`nginx/default.conf.template` 파일을 참고하여 `nginx/default.conf` 파일을 생성하세요.
+`nginx/conf.d/default.conf.template` 파일을 참고하여 `nginx/conf.d/default.conf` 파일을 생성하세요.
 
 **이 때 개별 어플리케이션 서버에 대한 경로도 함께 추가하세요.**
 
 ```bash
-cp nginx/default.conf.template nginx/default.conf
+cp nginx/conf.d/default.conf.template nginx/conf.d/default.conf
 ```
 
 ---
@@ -82,7 +82,9 @@ docker-compose down
 ├── docker-compose.yml
 ├── .env.template
 ├── nginx/
-│   ├── default.conf.template
+│   ├── nginx.conf
+│   ├── conf.d
+│   ├── ├── default.conf.template
 ├── .gitignore
 ├── README.md
 ```
